@@ -1704,7 +1704,6 @@
             animateSvgProgressOnClass(".images-hero", "_watcher-view", "counterProgress", "progressPath");
             animateSvgProgressOnClass(".upgrade__charts", "_watcher-view", "upgradeProgressValue", "upgradeProgressPath");
         }));
-        window["FLS"] = true;
         addTouchClass();
         addLoadedClass();
         menuInit();
