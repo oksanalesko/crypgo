@@ -22,14 +22,14 @@
 	*/
 
 	//Від кого лист
-	$mail->setFrom('from@gmail.com', 'Фрілансер по життю'); // Вказати потрібний E-mail
+	$mail->setFrom(); // Вказати потрібний E-mail
 	//Кому відправити
 	$mail->addAddress('to@gmail.com'); // Вказати потрібний E-mail
 	//Тема листа
-	$mail->Subject = 'Вітання! Це "Фрілансер по життю"';
+	$mail->Subject = '';
 
 	//Тіло листа
-	$body = '<h1>Зустрічайте супер листа!</h1>';
+	$body = '<h1></h1>';
 
 	//if(trim(!empty($_POST['email']))){
 		//$body.=$_POST['email'];
