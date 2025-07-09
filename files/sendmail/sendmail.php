@@ -22,18 +22,22 @@
 	*/
 
 	//Від кого лист
-	$mail->setFrom(); // Вказати потрібний E-mail
-	//Кому відправити
-	$mail->addAddress('to@gmail.com'); // Вказати потрібний E-mail
-	//Тема листа
-	$mail->Subject = '';
+$mail->setFrom('', 'SankaLskDev'); // Вказати потрібний E-mail
+//Кому відправити
+$mail->addAddress(''); // Вказати потрібний E-mail
+//Тема листа
+$mail->Subject = 'Вітання! Це лист з сайту Crypgo';
 
-	//Тіло листа
-	$body = '<h1></h1>';
+//Тіло листа
+$body = '<h1>Тобі надійшов контакт!</h1>';
 
-	//if(trim(!empty($_POST['email']))){
-		//$body.=$_POST['email'];
-	//}	
+$name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
+$email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
+$messageText = isset($_POST['message']) ? htmlspecialchars($_POST['message']) : '';
+
+$body .= "<p><strong>Ім'я:</strong> {$name}</p>";
+$body .= "<p><strong>Email:</strong> {$email}</p>";
+$body .= "<p><strong>Повідомлення:</strong> {$messageText}</p>";	
 	
 	/*
 	//Прикріпити файл
